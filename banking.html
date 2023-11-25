@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind css explore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        ali: '#ffffff'
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1 class="text-center text-5xl text-gray-500 font-medium my-10">Welcome to our Payonner</h1>
+    </header>
+
+    <section class="w-3/4 mx-auto mt-6">
+
+        <div class="grid grid-cols-3 gap-5">
+            <div class="bg-blue-500  text-white p-8 rounded-lg	">
+                <h3 class="text-2xl	">Deposit</h3>
+                <h4 class="text-4xl font-medium	">$<span id="deposit-total">000</span></h4>
+            </div>
+            <div class="bg-yellow-500  text-white p-8 rounded-lg	">
+                <h3 class="text-2xl	">Withdraw</h3>
+                <h4 class="text-4xl font-medium	">$<span id="withdraw-total">000</span></h4>
+            </div>
+            <div class="bg-green-500  text-white p-8 rounded-lg	">
+                <h3 class="text-2xl	">Balance</h3>
+                <h4 class="text-4xl font-medium	">$<span id="balance-total">000</span></h4>
+            </div>
+        </div>
+
+
+        <div class="grid grid-cols-2 gap-5 mt-5">
+            <div class="bg-green-500 p-8 rounded-lg text-white space-y-4">
+                <h3 class="text-2xl	">Please Deposit Your Amount</h3>
+                <input id="deposit-input" class="w-3/4 h-8 rounded px-3 border-2 border-slate-500 text-black"
+                    type="number" min="0" placeholder="$ Please Give Deposit Amount">
+                <button id="deposit-button"
+                    class="text-white bg-blue-500 rounded font-semibold py-2 px-3 block">Deposit</button>
+            </div>
+
+            <div class="bg-red-200 p-8 rounded-lg text-white space-y-4">
+                <h3 class="text-2xl	text-black">Please Withdraw Your Amount</h3>
+                <input id="withdraw-input" class="w-3/4 h-8 rounded px-3 border-2 border-slate-500 text-black"
+                    type="number" min="0" placeholder="$ Please Give Withdraw Amount">
+                <button id="withdraw-button"
+                    class="text-white bg-red-500 rounded font-semibold py-2 px-3 block">Withdraw</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/payonner.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind css explore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        ali: '#ffffff'
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1 class="text-center text-5xl text-gray-500 font-medium my-10">Please Login</h1>
+
+        <div class="w-2/4 mx-auto bg-green-200 p-8 rounded-lg text-white space-y-4">
+
+            <input id="email" class="w-3/4 h-8 rounded px-3 border-2 border-slate-500 text-black" type="text" min="0"
+                placeholder="User name is 'admin'">
+
+            <input id="password" class="w-3/4 h-8 rounded px-3 border-2 border-slate-500 text-black" type="password"
+                min="0" placeholder="password is 'admin'">
+
+            <button id="login-button"
+                class="text-white bg-green-500 rounded font-semibold py-2 px-3 block">Login</button>
+        </div>
+
+    </header>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>
